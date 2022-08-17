@@ -68,5 +68,6 @@ function! s:Bclose(bang, buffer)
   execute 'bdelete'.a:bang.' '.btarget
   execute wcurrent.'wincmd w'
 endfunction
+
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
-nnoremap <silent> <Leader>bd :Bclose<CR>
+nnoremap <silent> <C-Up> :Bclose<CR>
